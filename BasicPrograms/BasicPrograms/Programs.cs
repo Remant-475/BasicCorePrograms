@@ -1,29 +1,29 @@
 ﻿using System;
 
-
 namespace BasicPrograms
 {
-     class Programs
+    internal class Programs
     {
-        public void harmonicnumber()
+        public void factor()
         {
-            Console.WriteLine("Enter Number");
+            Console.WriteLine("Enter the number");
             int Num = int.Parse(Console.ReadLine());
-            double sum = 0;
-            for (int i = 1; i <= Num; i++)
+
+            Console.WriteLine("{0} Prime Factors is =", Num);
+            for (int i = 2; i < Num; i++)
             {
-                Console.WriteLine("1/{0}+", i);
-                sum += 1 / (float)i;
+                if (Num % i == 0)
+                {
+                    Console.WriteLine(i);
+
+                }
             }
-            Console.Write("\n");
-            Console.WriteLine("Harmonic Value is :" + sum);
         }
+
         public static void Main(String[] args)
         {
-            Programs harmonic = new Programs();
-            harmonic.harmonicnumber();
+            Programs factors = new Programs();
+            factors.factor();
         }
-
-
     }
 }
