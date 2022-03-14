@@ -1,29 +1,30 @@
 ﻿using System;
 
+
 namespace BasicPrograms
 {
-     class Programs
+    class Programs
     {
-        public void SwapNumber()
+        public void EvenAndOdd()
         {
-            Console.WriteLine("Enter Number a : ");
-            int Num1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter Number b :");
-            int Num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the number");
+            int Num = int.Parse(Console.ReadLine());
 
-            Num1 = Num1 * Num2;
-            Num2 = Num1 / Num2;
-            Num1 = Num1 / Num2;
+            if (Num % 2 == 0)
+            {
+                Console.WriteLine("Number is Even");
 
-            Console.WriteLine("Number after Swapping \n");
-            Console.WriteLine("Number a :" + Num1 + " Number b :" + Num2);
-
-
+            }
+            else
+            {
+                Console.WriteLine("Number is Odd");
+            }
         }
-        public static void Main(String[]args)
+        public static void Main(string[] args)
         {
-            Programs swap=new Programs();
-            swap.SwapNumber();
+            Programs evenandodd = new Programs();
+            evenandodd.EvenAndOdd();
         }
     }
+    
 }
