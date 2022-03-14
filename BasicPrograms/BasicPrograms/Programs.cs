@@ -5,27 +5,25 @@ namespace BasicPrograms
 {
      class Programs
     {
-        public void PowerOfTwo()
+        public void harmonicnumber()
         {
-            Console.WriteLine("Enter the Power ");
+            Console.WriteLine("Enter Number");
             int Num = int.Parse(Console.ReadLine());
-
-            if (0 <= Num && Num < 31)
+            double sum = 0;
+            for (int i = 1; i <= Num; i++)
             {
-                for (int i = 1; i <= Num; i++)
-                {
-                    Console.WriteLine("2^" + i + "=" + Math.Pow(2, i));
-                }
+                Console.WriteLine("1/{0}+", i);
+                sum += 1 / (float)i;
             }
-            else
-            {
-                Console.WriteLine("Exceed the range of integer datatype");
-            }
+            Console.Write("\n");
+            Console.WriteLine("Harmonic Value is :" + sum);
         }
         public static void Main(String[] args)
         {
-            Programs powerof = new Programs();
-            powerof.PowerOfTwo();
+            Programs harmonic = new Programs();
+            harmonic.harmonicnumber();
         }
+
+
     }
 }
