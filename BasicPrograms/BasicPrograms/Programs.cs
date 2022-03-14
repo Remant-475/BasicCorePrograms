@@ -1,36 +1,31 @@
 ﻿using System;
 
+
 namespace BasicPrograms
 {
-    internal class Program 
+     class Programs
     {
-        public void LeapYear()
+        public void PowerOfTwo()
         {
-            Console.WriteLine("Enter the year");
-            int Year = int.Parse(Console.ReadLine());
-            if (Year >= 1000 && Year <= 9999)
+            Console.WriteLine("Enter the Power ");
+            int Num = int.Parse(Console.ReadLine());
+
+            if (0 <= Num && Num < 31)
             {
-                if ((Year % 4 == 0 && Year != 100) || (Year % 400 == 0))
+                for (int i = 1; i <= Num; i++)
                 {
-                    Console.WriteLine(" It is a Leap Year");
-                }
-                else
-                {
-                    Console.WriteLine(" It is not a Leap Year");
+                    Console.WriteLine("2^" + i + "=" + Math.Pow(2, i));
                 }
             }
             else
             {
-                Console.WriteLine("Invalid year");
+                Console.WriteLine("Exceed the range of integer datatype");
             }
         }
-
-        public static void Main(String[]args)
+        public static void Main(String[] args)
         {
-            Program Leapyear=new Program();
-            Leapyear.LeapYear();
+            Programs powerof = new Programs();
+            powerof.PowerOfTwo();
         }
-
     }
-
 }
