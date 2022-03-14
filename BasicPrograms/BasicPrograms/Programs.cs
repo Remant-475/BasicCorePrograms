@@ -2,28 +2,28 @@
 
 namespace BasicPrograms
 {
-    internal class Programs
+     class Programs
     {
-        public void factor()
+        public void QuotientAndRemainder()
         {
-            Console.WriteLine("Enter the number");
+            Console.WriteLine("Enter the Number");
             int Num = int.Parse(Console.ReadLine());
+            Console.WriteLine(" Number divided by");
+            int Divide = int.Parse(Console.ReadLine());
+            int Num1;
+            int Num2;
 
-            Console.WriteLine("{0} Prime Factors is =", Num);
-            for (int i = 2; i < Num; i++)
-            {
-                if (Num % i == 0)
-                {
-                    Console.WriteLine(i);
+            Num1 = (Num % Divide);
+            Console.WriteLine("Remainder of Number = " + Num1);
+            Num2 = (Num / Divide);
+            Console.WriteLine("Quotient of Number = " + Num2);
 
-                }
-            }
         }
 
-        public static void Main(String[] args)
+        public static void Main(String[]args)
         {
-            Programs factors = new Programs();
-            factors.factor();
+            Programs quotient=new Programs();
+            quotient.QuotientAndRemainder();
         }
     }
 }
