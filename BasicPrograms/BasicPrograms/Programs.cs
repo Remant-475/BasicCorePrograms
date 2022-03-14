@@ -3,28 +3,34 @@
 
 namespace BasicPrograms
 {
-    class Programs
+     class Programs
     {
-        public void EvenAndOdd()
+        public void VowelandConsonant()
         {
-            Console.WriteLine("Enter the number");
-            int Num = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the character :");
+            char ch = char.Parse(Console.ReadLine());
 
-            if (Num % 2 == 0)
+            switch (ch)
             {
-                Console.WriteLine("Number is Even");
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    Console.WriteLine("Albhabet is Vowel");
+                    break;
+                default:
+                    Console.WriteLine("Albhabet is Consonant");
+                    break;
 
             }
-            else
-            {
-                Console.WriteLine("Number is Odd");
-            }
+
         }
-        public static void Main(string[] args)
+        public static void Main(String[] args)
         {
-            Programs evenandodd = new Programs();
-            evenandodd.EvenAndOdd();
+            Programs vowel = new Programs();
+            vowel.VowelandConsonant();
         }
     }
-    
+
 }
