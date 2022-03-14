@@ -1,50 +1,36 @@
 ﻿using System;
 
-namespace BasicProgrms
+namespace BasicPrograms
 {
-    class Program
+    internal class Program 
     {
-        public void FlipCoin()
+        public void LeapYear()
         {
-            Console.WriteLine("Enter the number of flip of coin");
-            int Num = int.Parse(Console.ReadLine());
-            int headcount = 0;
-            int tailcount = 0;
-
-            for (int i = 0; i < Num; i++)
+            Console.WriteLine("Enter the year");
+            int Year = int.Parse(Console.ReadLine());
+            if (Year >= 1000 && Year <= 9999)
             {
-                Random random = new Random();
-                float flipcoin = random.Next(0, 2);
-                if (flipcoin < 0.5)
+                if ((Year % 4 == 0 && Year != 100) || (Year % 400 == 0))
                 {
-                    Console.WriteLine("Coin is tail");
-                    tailcount++;
+                    Console.WriteLine(" It is a Leap Year");
                 }
                 else
                 {
-                    Console.WriteLine("Coin is head");
-                    headcount++;
+                    Console.WriteLine(" It is not a Leap Year");
                 }
-
             }
-            Console.WriteLine("number of heads : " + headcount);
-            Console.WriteLine("number of tails : " + tailcount);
-            float HeadPercent;
-            float TailPercent;
-
-            HeadPercent = (headcount * 100) / Num;
-            Console.WriteLine("Percentage of Head :" + HeadPercent);
-            TailPercent = 100 - HeadPercent;
-            Console.WriteLine("percentage of Tail :" + TailPercent);
+            else
+            {
+                Console.WriteLine("Invalid year");
+            }
         }
 
         public static void Main(String[]args)
         {
-            Program flipcoin = new Program;
-            flipcoin.FlipCoin();
-
+            Program Leapyear=new Program();
+            Leapyear.LeapYear();
         }
-            
+
     }
 
 }
